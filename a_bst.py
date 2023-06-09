@@ -58,9 +58,9 @@ def inorder_traversal(tree: Node, level:int=0):
     if level == 0:
         print('in order traversal')
     if tree !=None : # TODO
-        preorder_traversal(tree.left, level+1)
+        inorder_traversal(tree.left, level+1)
         print(f' level = {level:^3d} : value = {tree.value}')
-        preorder_traversal(tree.right, level+1)
+        inorder_traversal(tree.right, level+1)
 
           # TODO
 
@@ -70,8 +70,8 @@ def postorder_traversal(tree: Node, level:int=0):
     if level == 0:
         print('post order traversal')
     if tree!=None:
-        preorder_traversal(tree.left, level+1)
-        preorder_traversal(tree.right, level+1)
+        postorder_traversal(tree.left, level+1)
+        postorder_traversal(tree.right, level+1)
         print(f' level = {level:^3d} : value = {tree.value}')
          # TODO
         # TODO
