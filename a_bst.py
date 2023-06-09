@@ -24,12 +24,13 @@ class Tree:
 
 # NOT given to students
 def initialize() -> Tree:
-    return None # TODO
+    return Tree # TODO
 
 
 # NOT given to students
 def isEmpty(tree: Tree) -> bool:
-    return None # TODO
+    if tree.root == None:
+        return True # TODO
 
 
 # given to the students
@@ -56,18 +57,24 @@ def preorder_traversal(tree: Node, level:int=0):
 def inorder_traversal(tree: Node, level:int=0):
     if level == 0:
         print('in order traversal')
-    if False: # TODO
-        # TODO
-        return
+    if tree !=None : # TODO
+        preorder_traversal(tree.left, level+1)
+        print(f' level = {level:^3d} : value = {tree.value}')
+        preorder_traversal(tree.right, level+1)
+
+          # TODO
 
 
 # NOT given to the students
 def postorder_traversal(tree: Node, level:int=0):
     if level == 0:
         print('post order traversal')
-    if False: # TODO
+    if tree!=None:
+        preorder_traversal(tree.left, level+1)
+        preorder_traversal(tree.right, level+1)
+        print(f' level = {level:^3d} : value = {tree.value}')
+         # TODO
         # TODO
-        return
 
 
 # NOT given to the students
