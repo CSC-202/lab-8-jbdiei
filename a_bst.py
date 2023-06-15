@@ -80,29 +80,29 @@ def postorder_traversal(tree: Node, level:int=0):
 # NOT given to the students
 def search(root: Node, value: int) -> Node:
     # base cases
-    if False: # TODO
+    if root==None: # TODO
         return None # TODO
-    elif False: # TODO
-        return None # TODO
+    elif root.value == value: # TODO
+        return root.value # TODO
     # recursive step
     else:
-        if False: # TODO
-            return None # TODO
+        if value< root.value: # TODO
+            return search(root.left) # TODO
         else:
-            return None # TODO
+            return search(root.right) # TODO
 
 
 # NOT given to students
 def insert(root: Node, value: int) -> Node:
-    if False: # TODO
-        return None # TODO
+    if root==None: # TODO
+        return Node(value) # TODO
     else:
-        if False: # TODO
-            return None # TODO
-        elif False: # TODO
-            root.right = None # TODO
+        if root.value== value: 
+            return root # TODO
+        elif root.value < value: # TODO
+            root.right = insert(root.right, value)
         else:
-            root.left = None # TODO
+            root.left = insert(root.left, value) # TODO
     return root
 
 
@@ -168,3 +168,5 @@ def balance_tree(tree: Tree) -> Tree:
     tree.root = helper(nodes, 0, n - 1)
     print(f'num iters to balance {num_iter}')
     return tree
+
+
